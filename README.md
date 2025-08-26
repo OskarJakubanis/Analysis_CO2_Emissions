@@ -1,7 +1,3 @@
-Okej, przygotowałem zaktualizowane README dla Twojego projektu w formacie Markdown, uwzględniające Twoje uwagi:
-
----
-
 # 📊 CO₂ Emissions Analysis (2000–2024)
 
 This project provides an analytical pipeline to explore, summarize, and export CO₂ emissions data across countries from 2000 to 2024. The dataset is sourced from **Our World in Data**.
@@ -57,7 +53,7 @@ This project provides an analytical pipeline to explore, summarize, and export C
 
 ## 📬 Contact
 
-For questions or collaboration proposals, please [open an issue](https://github.com/your-repo/issues) or contact me directly.
+For questions or collaboration proposals, please contact me directly.
 
 ---
 
