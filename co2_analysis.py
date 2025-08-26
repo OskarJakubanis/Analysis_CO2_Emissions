@@ -31,7 +31,7 @@ SELECT country,
 FROM growth
 WHERE year = 2023 AND co2_growth_ratio IS NOT NULL
 ORDER BY co2_growth_ratio DESC
-LIMIT 10;
+LIMIT 100;
 """
 df_growth = pd.read_sql_query(query_growth, conn)
 df_growth.to_csv("top10_growth.csv", index=False)
@@ -63,7 +63,7 @@ SELECT country,
 FROM growth
 WHERE year = 2023 AND co2_change_abs IS NOT NULL
 ORDER BY co2_change_abs DESC
-LIMIT 10;
+LIMIT 100;
 """
 df_nominal_growth = pd.read_sql_query(query_nominal_growth, conn)
 df_nominal_growth.to_csv("top10_growth_nominal.csv", index=False)
@@ -106,7 +106,7 @@ FROM pop2023 p
 LEFT JOIN co2data c ON p.country = c.country
 GROUP BY p.country, p.population
 ORDER BY p.population DESC
-LIMIT 10;
+LIMIT 100;
 """
 df_top10_pop = pd.read_sql_query(query_top10_pop, conn)
 df_top10_pop.to_csv("top10_population_co2.csv", index=False)
