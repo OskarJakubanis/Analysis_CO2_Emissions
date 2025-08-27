@@ -15,7 +15,7 @@ This project provides an analytical pipeline to explore, summarize, and export C
 
 ## 🧾 Data Sources
 
-* `emissions.db` – SQLite database containing CO₂ emissions, population, and year-by-country records from Our World in Data.
+* `ANALYSIS_CO2.db` – SQLite database containing CO₂ emissions, population, and year-by-country records from Our World in Data.
 
 ---
 
@@ -32,15 +32,22 @@ This project provides an analytical pipeline to explore, summarize, and export C
 
 ## 📁 Script Overview
 
-* Scripts manage data provided in `emissions.csv`.
+* **🧱 Data Loading & Validation (one-time setup)**
 
-* Python scripts process the query results through filtering, aggregation, window functions, and conditional calculations for growth and decline metrics, and export multiple CSV files including:
+  * Imported `owid-co2-data.csv` into SQLite and materialized the `emissions` table.
+  * Validated schema and data quality: enforced numeric types for `co2`, `population`, and `year`; checked NULLs/missing values; standardized key fields.
+  * Persisted the database as **`ANALYSIS_CO2.db`**. This file is the base for all SQL automation in Python.
+  * The pipeline is reusable: as long as the base CSV keeps the same filename and column names, you can refresh the DB and re-run the scripts on a schedule.
 
-  * Top 10 growth in percent and nominal
-  * Top 10 decline in percent and nominal
-  * Top 10 most populous countries with CO₂ changes
+* **Automated Analysis & Reporting**
 
-* SQL queries are written and executed within Python using `pandas.read_sql_query` and `sqlite3` connection objects.
+  * Python scripts connect to **`ANALYSIS_CO2.db`** and execute SQL queries using `pandas.read_sql_query`.
+  * Queries include filtering, CTEs, and window functions to calculate absolute and relative CO₂ changes.
+  * Results are exported to multiple CSV reports:
+
+    * Top 10 growth (percent and nominal)
+    * Top 10 decline (percent and nominal)
+    * Top 10 most populous countries with CO₂ changes
 
 ---
 
@@ -51,7 +58,6 @@ This project provides an analytical pipeline to explore, summarize, and export C
 3. **Run the analysis script (`.py`)** – generate CO₂ emissions reports and export results to CSV files.
 4. **Check the console output** – review printed metrics and any generated files for insights.
 
-*Refer to `used_functions.md` for an overview of key Python and library functions used.*  
 *In `.py` files, `#` comments show step-by-step procedures.*
 
 ---
