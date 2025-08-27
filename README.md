@@ -25,12 +25,12 @@ This project provides an analytical pipeline to explore, summarize, and export C
 
 ## 📁 Script Overview
 
-* **🧱 Data Loading & Validation (one-time setup)**
-
-  * Imported `owid-co2-data.csv` into SQLite and materialized the `emissions` table.
-  * Validated schema and data quality: enforced numeric types for `co2`, `population`, and `year`; checked NULLs/missing values; standardized key fields.
+* **Data Loading & Validation (one-time setup)**
+  * Imported `owid-co2-data.csv` into SQLite and materialized the `emissions` table.  
+  * Validated schema and data quality: enforced numeric types for `co2`, `population`, and `year`; checked NULLs/missing values; standardized key fields.  
   * Persisted the database as **`ANALYSIS_CO2.db`**. This file is the base for all SQL automation in Python.
-  * The pipeline is reusable: as long as the base CSV keeps the same filename and column names, you can refresh the DB and re-run the scripts on a schedule.
+
+> **Note:** The pipeline is reusable: as long as the base CSV keeps the same filename and column names, you can refresh the DB and re-run the scripts on a schedule.
 
 * **Automated Analysis & Reporting**
 
