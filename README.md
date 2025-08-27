@@ -30,17 +30,17 @@ This project provides an analytical pipeline to explore, summarize, and export C
   * Validated schema and data quality: enforced numeric types for `co2`, `population`, and `year`; checked NULLs/missing values; standardized key fields.  
   * Persisted the database as **`ANALYSIS_CO2.db`**. This file is the base for all SQL automation in Python.
 
-> **Note:** The pipeline is reusable: as long as the base CSV keeps the same filename and column names, you can refresh the DB and re-run the scripts on a schedule.
-
 * **Automated Analysis & Reporting**
 
   * Python scripts connect to **`ANALYSIS_CO2.db`** and execute SQL queries using `pandas.read_sql_query`.
   * Queries include filtering, CTEs, and window functions to calculate absolute and relative CO₂ changes.
   * Results are exported to multiple CSV reports:
 
-    * Top 10 growth (percent and nominal)
-    * Top 10 decline (percent and nominal)
-    * Top 10 most populous countries with CO₂ changes
+    * Top 100 growth (percent and nominal)
+    * Top 100 decline (percent and nominal)
+    * Top 100 most populous countries with CO₂ changes
+
+> **Note:** The pipeline is reusable: as long as the base CSV keeps the same filename and column names, you can refresh the DB and re-run the scripts on a schedule.
 
 ---
 
