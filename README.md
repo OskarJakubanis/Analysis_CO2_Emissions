@@ -54,7 +54,3 @@ This project provides an analytical pipeline to explore, summarize, and export C
 ## 📬 Contact
 
 For questions or collaboration proposals, please contact me directly.
-
----
-
-Mogę też od razu zapisać ten tekst jako gotowy `README.md`, z zachowaniem spacji i łamania wierszy dla Markdown preview. Chcesz, żebym to zrobił?
