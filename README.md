@@ -16,8 +16,7 @@ This project provides an analytical pipeline to explore, summarize, and export C
 ## ⚙️ Technologies Used
 
 * Python 3.9+
-* `pandas` for data manipulation and SQL queries
-* `sqlite3` for database connection and querying
+* `sqlite3` for database connection and SQL queries
 
 📁 Required libraries are listed in [`requirements.txt`](./requirements.txt)
 📖 Function-level usage is documented in [`used_functions.md`](./used_functions.md)
