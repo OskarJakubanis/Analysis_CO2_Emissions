@@ -58,4 +58,4 @@ This project provides an analytical pipeline to explore, summarize, and export C
 
 ## 📬 Contact
 
-For questions or collaboration proposals, please contact me directly.
+For questions, suggestions, or collaboration proposals, please [open an issue](https://github.com/your-repo/issues) or contact me directly.
