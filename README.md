@@ -46,8 +46,13 @@ This project provides an analytical pipeline to explore, summarize, and export C
 
 ## 🧪 Project Workflow
 
-1. Connect to the SQLite database.
-2. Export results to CSV files.
+1. **Review the data** – check `data_description.md` to understand the structure and content of the CSV files.
+2. **Clone the repository** – download all project files to your local machine.
+3. **Run the analysis script (`.py`)** – generate CO₂ emissions reports and export results to CSV files.
+4. **Check the console output** – review printed metrics and any generated files for insights.
+
+*Refer to `used_functions.md` for an overview of key Python and library functions used.*  
+*In `.py` files, `#` comments show step-by-step procedures.*
 
 ---
 
