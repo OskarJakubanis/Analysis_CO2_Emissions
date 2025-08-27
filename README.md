@@ -9,13 +9,7 @@ This project provides an analytical pipeline to explore, summarize, and export C
 * Identify countries with the largest increases and decreases in CO₂ emissions.
 * Calculate absolute and percentage changes in CO₂ emissions between 2000 and 2024.
 * Analyze the relationship between population size and CO₂ emissions.
-* Export insights into CSV reports for further analysis.
-
----
-
-## 🧾 Data Sources
-
-* `ANALYSIS_CO2.db` – SQLite database containing CO₂ emissions, population, and year-by-country records from Our World in Data.
+* Export insights into CSV reports for further analysis.  
 
 ---
 
