@@ -18,7 +18,7 @@ This project provides an analytical pipeline to explore, summarize, and export C
 * Python 3.9+
 * `sqlite3` for database connection and SQL queries
 
-📁 Required libraries are listed in [`requirements.txt`](./requirements.txt)
+📁 Required libraries are listed in [`requirements.txt`](./requirements.txt)  
 📖 Function-level usage is documented in [`used_functions.md`](./used_functions.md)
 
 ---
