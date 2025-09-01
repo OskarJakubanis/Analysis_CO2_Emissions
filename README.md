@@ -1,6 +1,7 @@
 # 📊 CO₂ Emissions Analysis (2000–2024)
 
-This project provides an analytical pipeline to explore, summarize, and export CO₂ emissions data across countries from 2000 to 2024. The dataset is sourced from **Our World in Data**.
+This project provides an analytical pipeline to explore, summarize, and export CO₂ emissions data across countries from 2000 to 2024. The dataset is sourced from **Our World in Data**.  
+This report is a key tool for CO₂ analysis, allowing for subsequent examination of individual countries to identify which nations others can learn from, which countries should diligently follow these lessons, and which economic sectors need transformation. While change is not immediate, modern technology enables us to implement it more effectively.
 
 ---
 
@@ -25,13 +26,10 @@ This project provides an analytical pipeline to explore, summarize, and export C
 
 ## 📁 Script Overview
 
-* **Data Loading & Validation (one-time setup)**
+The pipeline is designed to efficiently handle data operations, from initial loading and validation to automated analysis and reporting:  
   * Imported `owid-co2-data.csv` into SQLite and materialized the `emissions` table.  
   * Validated schema and data quality: enforced numeric types for `co2`, `population`, and `year`; checked NULLs/missing values; standardized key fields.  
   * Persisted the database as **`ANALYSIS_CO2.db`**. This file is the base for all SQL automation in Python.
-
-* **Automated Analysis & Reporting**
-
   * Python scripts connect to **`ANALYSIS_CO2.db`** and execute SQL queries using `pandas.read_sql_query`.
   * Queries include filtering, CTEs, and window functions to calculate absolute and relative CO₂ changes.
   * Results are exported to multiple CSV reports:
@@ -47,11 +45,11 @@ This project provides an analytical pipeline to explore, summarize, and export C
 ## 🧪 Project Workflow
 
 1. **Review the data** – check `data_description.md` to understand the structure and content of the CSV files.
-2. **Clone the repository** – download all project files to your local machine.
+2. **Clone the repository** to your local machine.
 3. **Run the analysis script (`.py`)** – generate CO₂ emissions reports and export results to CSV files.
 4. **Check the console output** – review printed metrics and any generated files for insights.
 
-*In `.py` files, `#` comments show step-by-step procedures.*
+*In `.py` file, `#` comments show step-by-step procedures.*
 
 ---
 
