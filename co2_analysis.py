@@ -1,9 +1,9 @@
-# This script performs CO₂ emissions analysis for the period 2000–2023:
-# 1. Calculates top 100 countries with the highest percent growth in CO₂ emissions
-# 2. Calculates top 100 countries with the highest nominal growth in CO₂ emissions
-# 3. Calculates top 100 countries with the largest nominal decline in CO₂ emissions
-# 4. Calculates top 100 countries with the largest percent decline in CO₂ emissions
-# 5. Lists top 10 most populous countries in 2023 with their CO₂ changes
+# This script performs CO₂ emissions analysis for the period 2000–2023 and calculates top 100 countries with the highest
+# 1. percent growth in CO₂ emissions
+# 2. nominal growth in CO₂ emissions
+# 3. nominal decline in CO₂ emissions
+# 4. percent decline in CO₂ emissions
+# 5. most populous countries in 2023 with their CO₂ changes
 
 # Import necessary libraries:
 import sqlite3                 # sqlite3: to connect to and manage the SQLite database
